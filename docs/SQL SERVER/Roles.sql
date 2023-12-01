@@ -1,0 +1,44 @@
+SELECT*FROM Roles
+
+CREATE PROCEDURE SP_LISTAR_ROL
+AS
+	BEGIN 
+	SELECT*FROM Roles
+	END
+
+
+CREATE PROCEDURE SP_LISTAR_ROL_ID 
+@Id_rol INT
+AS
+	BEGIN 
+	SELECT*FROM Roles WHERE Id=@Id_rol
+	END
+
+
+CREATE PROCEDURE SP_REGISTRAR_ROL
+@nombre VARCHAR(50),
+@descripcion VARCHAR(50),
+@estado VARCHAR(50)
+AS
+	BEGIN 
+	INSERT INTO Roles VALUES(@nombre,@descripcion,@estado)
+	END
+
+
+CREATE PROCEDURE SP_ACTUALIZAR_ROL
+@Id_rol INT,
+@nombre VARCHAR(50),
+@descripcion VARCHAR(50),
+@estado VARCHAR(50)
+AS
+	BEGIN 
+	UPDATE Roles SET NombreRol=@nombre,Descripcion=@descripcion,Estado=@estado
+	WHERE Id=@Id_rol
+	END
+
+CREATE PROCEDURE SP_ELIMINAR_ROL
+@Id_rol INT
+AS
+	BEGIN 
+	DELETE Roles WHERE Id=@Id_rol
+	END

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "datatables/datatables": "^1.10",
+        "components/jquery": "^3.7"
+    }
+}
