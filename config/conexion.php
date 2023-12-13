@@ -7,8 +7,10 @@
             try{
                 /* TODO: Cadena de Conexion */
                 $conectar = $this->dbh=new 
+
                 PDO("sqlsrv:Server=server-01-colegio.database.windows.net;Database=bd_sys_library","administrado-colegio","@Sistema12345");
-                 return $conectar;
+                 
+                return $conectar;
             }catch (Exception $e){
                 /* TODO: En caso de error mostrar mensaje */
                 print "Error Conexion BD". $e->getMessage() ."<br/>";
@@ -16,9 +18,8 @@
             }
         } 
         public static function ruta(){ 
-             return "http://sistema-web-biblioteca.azurewebsites.net/";  
-
-            // return "http://localhost/Sistema_gestion_biblioteca_2023/";  
+            //return "http://localhost/Sistema_gestion_biblioteca_2023/";  
+            return "http://sistema-web-biblioteca.azurewebsites.net/";  
 
             //Server:server-01-colegio.database.windows.net
             //User:administrado-colegio
